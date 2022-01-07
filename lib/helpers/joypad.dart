@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'direction.dart';
+import 'package:flutter_game/helpers/direction.dart';
 
 class Joypad extends StatefulWidget {
   final ValueChanged<Direction>? onDirectionChanged;

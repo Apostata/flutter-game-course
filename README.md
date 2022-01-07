@@ -1,6 +1,8 @@
 # flutter_game
 
-A new Flutter project.
+Flutter game project in flutter + flame
+Tutorial made by **By Vincenzo Guzzi** : https://www.raywenderlich.com/27407121-building-games-in-flutter-with-flame-getting-started
+
 
 ## Getting Started
 

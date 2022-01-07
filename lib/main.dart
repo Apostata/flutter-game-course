@@ -1,10 +1,10 @@
 import 'package:flame/flame.dart';
 import 'package:flutter/material.dart';
-import 'main_game_page.dart';
+import 'package:flutter_game/main_game_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Flame.device.fullScreen();
+  await Flame.device.fullScreen(); // flame defined full screen
 
   runApp(const App());
 }

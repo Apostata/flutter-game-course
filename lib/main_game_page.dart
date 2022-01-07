@@ -1,6 +1,8 @@
+import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'helpers/direction.dart';
-import 'helpers/joypad.dart';
+import 'package:flutter_game/Models/the_game.dart';
+import 'package:flutter_game/helpers/direction.dart';
+import 'package:flutter_game/helpers/joypad.dart';
 
 class MainGamePage extends StatefulWidget {
   const MainGamePage({Key? key}) : super(key: key);
@@ -10,12 +12,15 @@ class MainGamePage extends StatefulWidget {
 }
 
 class MainGameState extends State<MainGamePage> {
+  TheGame game = TheGame();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color.fromRGBO(0, 0, 0, 1),
         body: Stack(
           children: [
+            GameWidget(game: game), // render the game
             Align(
               alignment: Alignment.bottomRight,
               child: Padding(
@@ -28,6 +33,6 @@ class MainGameState extends State<MainGamePage> {
   }
 
   void onJoypadDirectionChanged(Direction direction) {
-    // TODO 2
+    game.onJoypadDirectionChanged(direction);
   }
 }
